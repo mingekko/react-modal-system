@@ -1,0 +1,61 @@
+{
+  "name": "@339rama/react-modal-system",
+  "version": "1.0.0",
+  "description": "Simple modal provider for react app",
+  "scripts": {
+    "build": "microbundle --jsx React.createElement",
+    "test": "echo \"Error: no test specified\" && exit 0",
+    "lint": "eslint \"{**/*,*}.{js,ts,jsx,tsx}\"",
+    "lint:fix": "npm run lint -- --fix",
+    "prettier": "prettier --write \"{src,tests,example/src}/**/*.{js,ts,jsx,tsx}\"",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run prettier && npm run lint"
+  },
+  "keywords": [
+    "react",
+    "modal",
+    "provider"
+  ],
+  "author": "Ramil Bariev (339rama)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/339rama/react-modal-system.git"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.52",
+    "@typescript-eslint/eslint-plugin": "^5.48.1",
+    "@typescript-eslint/parser": "^5.48.1",
+    "eslint": "^8.31.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.32.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "microbundle": "^0.15.1",
+    "prettier": "^2.8.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "typescript": "^4.9.4"
+  },
+  "peerDependencies": {
+    "react": ">=17"
+  },
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
+  "type": "module",
+  "source": "src/index.ts",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "exports": {
+    "types": "./dist/index.d.ts",
+    "require": "./dist/index.js",
+    "default": "./dist/index.modern.mjs"
+  },
+  "types": "dist/index.d.ts",
+  "dependencies": {
+    "react-uuid": "^2.0.0"
+  }
+}
