@@ -1,5 +1,5 @@
 {
-  "name": "@339rama/react-modal-system",
+  "name": "@339rama/mingekko-react-modal-system",
   "version": "1.0.0",
   "description": "Simple modal provider for react app",
   "scripts": {
@@ -20,7 +20,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/339rama/react-modal-system.git"
+    "url": "git+https://https://github.com/mingekko/react-modal-system"
   },
   "devDependencies": {
     "@types/react": "^17.0.52",
