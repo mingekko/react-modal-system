@@ -10,12 +10,12 @@ const ModalProvider = (props: ModalProviderProps) => {
   const remove = useCallback((id: string) => {
     setModals((m) => Object.fromEntries(Object.entries(m).filter(([modalId]) => modalId !== id)))
   }, [])
-  const push = useCallback((modal: unknown) => {
+  const push = useCallback((modal: unknown, props: any) => {
     const id = uuid()
     setModals((m) => {
       return {
         ...m,
-        [id]: { place: Object.keys(m).length + 1, content: modal, close: remove.bind(null, id) },
+        [id]: { place: Object.keys(m).length + 1, content: modal, close: remove.bind(null, id), props: props },
       }
     })
     return id
